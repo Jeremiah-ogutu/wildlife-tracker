@@ -16,4 +16,4 @@ The Forest Service is considering a proposal from a timber company to clearcut a
 
 ### License
 
-Copyright (c) 2017 **_MIT License_**
+Copyright (c) 2021 **_MIT License_**
