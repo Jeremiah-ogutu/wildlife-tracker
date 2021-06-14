@@ -28,16 +28,16 @@ public class App {
 
 //
 //
-//
-//        post("/post_sighting", (req, res) -> { //new
-//            Map<String, Object> model = new HashMap<>();
-//            String name = req.queryParams("name");
-//            String age = req.queryParams("age");
-//            String healthy = req.queryParams("healthy");
-//            String endangered = req.queryParams("endangered");
-//            String location = req.queryParams("location");
-//            String ranger = req.queryParams("ranger");
-//
+
+        post("/post_sighting", (req, res) -> { //new
+            Map<String, Object> model = new HashMap<>();
+            String name = req.queryParams("name");
+            String age = req.queryParams("age");
+            String healthy = req.queryParams("healthy");
+            String endangered = req.queryParams("endangered");
+            String location = req.queryParams("location");
+            String ranger = req.queryParams("ranger");
+
 //            Animal newAnimal = new Animal(name, age,endangered,healthy);
 //            Sighting newSighting = new Sighting(location,ranger);
 //            newAnimal.save();
