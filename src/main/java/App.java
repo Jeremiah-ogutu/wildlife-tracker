@@ -38,14 +38,14 @@ public class App {
             String location = req.queryParams("location");
             String ranger = req.queryParams("ranger");
 
-//            Animal newAnimal = new Animal(name, age,endangered,healthy);
-//            Sighting newSighting = new Sighting(location,ranger);
-//            newAnimal.save();
-//            newSighting.save();
-////            System.out.println(newAnimal);
-//            return new ModelAndView(model, "success.hbs");
-//        }, new HandlebarsTemplateEngine());
-//    }
+            Animal newAnimal = new Animal(name, age,endangered,healthy);
+            Sighting newSighting = new Sighting(location,ranger);
+            newAnimal.save();
+            newSighting.save();
+//            System.out.println(newAnimal);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+    }
 
 
 
