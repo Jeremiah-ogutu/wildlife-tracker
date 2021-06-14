@@ -51,18 +51,18 @@ public class EndangeredAnimal {
         }
     }
 
-//    public void save() {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "INSERT INTO animals (name, age,endangered,healthy) VALUES (:name, :age,:endangered,:healthy)";
-//            this.id = (int) con.createQuery(sql, true)
-//                    .addParameter("name", this.name)
-//                    .addParameter("age", this.age)
-//                    .addParameter("endangered", this.endangered)
-//                    .addParameter("healthy", this.healthy)
-//                    .executeUpdate()
-//                    .getKey();
-//        }
-//    }
+    public void save() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO animals (name, age,endangered,healthy) VALUES (:name, :age,:endangered,:healthy)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("name", this.name)
+                    .addParameter("age", this.age)
+                    .addParameter("endangered", this.endangered)
+                    .addParameter("healthy", this.healthy)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }
 
     public static List<EndangeredAnimal> all() {
         String sql = "SELECT * FROM endangeredanimal";
