@@ -15,17 +15,17 @@ public class App {
         get("/", (request, response) -> {
 
 
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            ArrayList<Animal> allAnimals = (ArrayList<Animal>) Animal.all();
-//            ArrayList<Sighting> allSighting = (ArrayList<Sighting>) Sighting.all();
-//
-//            model.put("allSighting", allSighting);
-//            model.put("allAnimals", allAnimals);
-//
-//
-//            return new ModelAndView(model, "index.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Animal> allAnimals = (ArrayList<Animal>) Animal.all();
+            ArrayList<Sighting> allSighting = (ArrayList<Sighting>) Sighting.all();
+
+            model.put("allSighting", allSighting);
+            model.put("allAnimals", allAnimals);
+
+
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
+
 //
 //
 //
