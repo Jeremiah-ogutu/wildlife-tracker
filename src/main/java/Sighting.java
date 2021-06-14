@@ -1,11 +1,11 @@
-//import org.sql2o.Connection;
-//
-//import java.util.List;
-//
-//public class Sighting {
-//    private String location;
-//    private String ranger;
-//    private int id;
+import org.sql2o.Connection;
+
+import java.util.List;
+
+public class Sighting {
+    private String location;
+    private String ranger;
+    private int id;
 //
     public Sighting(String location, String ranger) {
         this.location = location;
