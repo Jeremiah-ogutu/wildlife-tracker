@@ -26,23 +26,20 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-//
-//
-
-        post("/post_sighting", (req, res) -> { //new
+        post("/post_sighting", (request, response) -> { //new
             Map<String, Object> model = new HashMap<>();
-            String name = req.queryParams("name");
-            String age = req.queryParams("age");
-            String healthy = req.queryParams("healthy");
-            String endangered = req.queryParams("endangered");
-            String location = req.queryParams("location");
-            String ranger = req.queryParams("ranger");
+            String name = request.queryParams("name");
+            String age = request.queryParams("age");
+            String healthy = request.queryParams("healthy");
+            String endangered = request.queryParams("endangered");
+            String location = request.queryParams("location");
+            String ranger = request.queryParams("ranger");
 
             Animal newAnimal = new Animal(name, age,endangered,healthy);
             Sighting newSighting = new Sighting(location,ranger);
             newAnimal.save();
             newSighting.save();
-//            System.out.println(newAnimal);
+            System.out.println(newAnimal);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
     }
