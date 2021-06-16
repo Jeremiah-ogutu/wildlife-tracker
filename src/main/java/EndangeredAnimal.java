@@ -7,13 +7,15 @@ public class EndangeredAnimal {
     private String age;
     private String endangered;
     private String healthy;
+    private String ranger;
     private int id;
 
-    public EndangeredAnimal(String name, String age, String endangered,String  healthy) {
+    public EndangeredAnimal(String name, String age, String endangered,String  healthy,String ranger) {
         this.name = name;
         this.age = age;
         this.endangered = endangered;
         this.healthy = healthy;
+        this.ranger = ranger;
     }
 
     public int getId() {
@@ -59,6 +61,7 @@ public class EndangeredAnimal {
                     .addParameter("age", this.age)
                     .addParameter("endangered", this.endangered)
                     .addParameter("healthy", this.healthy)
+                    .addParameter("ranger", this.ranger)
                     .executeUpdate()
                     .getKey();
         }

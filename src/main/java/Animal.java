@@ -9,12 +9,14 @@ public class Animal {
     private String endangered;
     private String healthy;
     private int id;
+    private String ranger;
 
-    public Animal(String name, String age, String endangered, String healthy) {
+    public Animal(String name, String age, String endangered, String healthy,String ranger) {
         this.name = name;
         this.age = age;
         this.endangered = endangered;
         this.healthy = healthy;
+        this.ranger = ranger;
     }
 
     public String getName() {
@@ -57,6 +59,7 @@ public class Animal {
                     .addParameter("age", this.age)
                     .addParameter("endangered", this.endangered)
                     .addParameter("healthy", this.healthy)
+                    .addParameter("ranger", this.ranger)
                     .executeUpdate()
                     .getKey();
         }

@@ -1,0 +1,26 @@
+{{#partial "content"}}
+    <div class="views animals">
+        {{#if allSighting}}
+            {{#each animals}}
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Animal {{name}}</h5>
+
+                        <p class="card-text">Animal {{endagered}}</p>
+                        <p class="card-text">Health {{healthy}}</p>
+                        <p class="card-text">Age {{age}}</p>
+                        <p class="card-text">ranger {{ranger}}</p>
+
+                    </div>
+
+                </div>
+            {{/each}}
+        {{else}}
+<!--            <h2>No animals! Create some animals <a href="/create/animal">here</a></h2>-->
+            <h2>No animals! Create some animals </h2>
+        {{/if}}
+
+    </div>
+
+{{/partial}}
+{{> layout.hbs}}

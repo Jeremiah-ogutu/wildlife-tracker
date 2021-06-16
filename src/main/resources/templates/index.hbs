@@ -1,6 +1,6 @@
 {{#partial "content"}}
 
-    <div class="jumbotron text-center">
+    <div class="jumbotron ">
 
         <h1>Wildlife Tracker</h1>
 
@@ -18,7 +18,7 @@
 
             <label for="age">Animal's Age</label>
             <select class="form-control" id="inlineFormCustomSelect" name="age" required>
-                <option >Choose... Animal's Age</option>
+                <option >Choose Animal's Age</option>
                 <option  value="new-born">New Born</option>
                 <option value="young">Young</option>
                 <option value="adult">Adult</option>
@@ -26,7 +26,7 @@
 
             <label for="health">Animal's Health</label>
             <select class="form-control" id="inlineFormCustomSelect" name="healthy" required>
-                <option >Choose... Animal's Health</option>
+                <option >Choose Animal's Health</option>
                 <option  value="true">Okay</option>
                 <option value="false">Ill</option>
 
@@ -34,7 +34,7 @@
 
             <label for="endangered">Is animal Endangered ?</label>
             <select class="form-control" id="inlineFormCustomSelect" name="endangered" required>
-                <option disabled>Choose... Animal's Endangered Category</option>
+                <option disabled>Choose Animal's Endangered Category</option>
                 <option  value="true">Not under Endangered Category</option>
                 <option value="false">Animal under Endangered Category</option>
 
@@ -42,7 +42,7 @@
 
             <label for="location">Sighting location</label>
             <select class="form-control" id="inlineFormCustomSelect" name="location" required>
-                <option >Choose... Sighting location</option>
+                <option >Choose Sighting location</option>
                 <option value="zone_A">RiverSide</option>
                 <option value="zone_B">DeepForest</option>
                 <option value="zone_C">Near Quadrant</option>
@@ -53,7 +53,7 @@
 
             <label for="ranger">Ranger Name</label>
             <select class="form-control" id="inlineFormCustomSelect" name="ranger" required>
-                <option >Choose... Your Name</option>
+                <option >Choose Your Name</option>
                 <option  value="kento">Kento</option>
                 <option  value="Zoo">Zoo</option>
                 <option  value="Tsavo">Tsavo</option>
@@ -63,11 +63,12 @@
 
 
 
-            <button type="submit" class="btn btn-primary">Register</button>
+<!--            <button type="submit" class="btn btn-primary">Register</button>-->
+            <button type="submit" class="btn btn-success">POST-TRACK!</button>
 
         </form>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3 text-center">
 
         <h3 class="">List of Sightings</h3>
         {{#if allSighting}}
@@ -80,29 +81,36 @@
 
         <ol>
             {{#each allAnimals}}
-                <h3>{{id}}. Animal : {{name}}  </h3>
-                <h4>Age {{age}}: </h4>
-                <h4>Endangered ? : {{endangered}}</h4>
-                <h4>Healthy ? :  {{healthy}}</h4>
+<!--                <h3>{{id}}. Animal : {{name}}  </h3>-->
+<!--                <h4>Age {{age}}: </h4>-->
+<!--                <h4>Endangered  : {{endangered}}</h4>-->
+<!--                <h4>Healthy  :  {{healthy}}</h4>-->
+                <h5 class="card-title">{{id}}. Animal {{name}}</h5>
+
+                <p class="card-text">Endangered {{endangered}}</p>
+                <p class="card-text">Health {{healthy}}</p>
+                <p class="card-text">Age {{age}}</p>
+<!--                <p class="card-text">Ranger {{ranger}}</p>-->
+
             </ol>
-            <ul>
+<!--            <ul>-->
 
-            {{/each}}
-        </ul>
-
-
-        {{else}}
-            <div class="jumbotron m-4" >
-                <h4>Add animal Sighting </h4>
-
-            </div>
-        {{/if}}
+<!--            {{/each}}-->
+<!--        </ul>-->
 
 
+<!--        {{else}}-->
+<!--            <div class="jumbotron m-4" >-->
+<!--                <h4>Add animal Sighting </h4>-->
+
+<!--            </div>-->
+<!--        {{/if}}-->
 
 
 
-    </div>
+
+
+<!--    </div>-->
 
 
 
