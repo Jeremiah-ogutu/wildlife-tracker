@@ -6,10 +6,12 @@ public class Sighting {
     private String location;
     private String ranger;
     private int id;
+    private  String animal;
 //
     public Sighting(String location, String ranger) {
         this.location = location;
         this.ranger = ranger;
+        this.animal =animal;
     }
 
     public String getLocation() {
@@ -19,7 +21,12 @@ public class Sighting {
     public String getRanger() {
         return ranger;
     }
+
+    public String getAnimal() {
+        return animal;
+    }
 //
+
     @Override
     public boolean equals(Object otherSighting){
         if (!(otherSighting instanceof Sighting)) {
